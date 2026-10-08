@@ -5,8 +5,8 @@ public class CreditCardPayment extends Payment {
 
 
     //CONSTRUCTOR TARJETA CREDITO
-    public CreditCardPayment (String status, double amount, String date, double paymentLimit){
-        super(status,amount,date);
+    public CreditCardPayment (double amount, String date, double paymentLimit){
+        super(amount,date);
         this.paymentLimit = (paymentLimit < 0) ? 1.0 : paymentLimit;
     }// FIN CONSTRUCTOR
 
