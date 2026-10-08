@@ -30,4 +30,9 @@ public class CreditCardPayment extends Payment {
         System.out.println("El estado del pago es: " + getStatus());
     }// OVERRIDE
 
-    }// fin processPayment
+    @Override
+    public void validateData() {
+
+    }
+
+}// fin processPayment

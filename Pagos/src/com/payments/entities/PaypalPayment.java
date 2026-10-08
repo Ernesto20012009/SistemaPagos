@@ -25,4 +25,9 @@ public class PaypalPayment extends Payment {
         }//fin else
         System.out.println("El estado del pago es: " + getStatus());
     }//processPayment
+
+    @Override
+    public void validateData() {
+        
+    }
 }//class PypalPayments
