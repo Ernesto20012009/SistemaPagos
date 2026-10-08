@@ -1,4 +1,4 @@
 package com.payments.entities;
 
-public class Payment {
+public abstract class Payment {
 }
