@@ -1,11 +1,16 @@
 package com.payments.entities;
 
-public class PaypalPayment extends Payment {
-    private double balance;
+import com.payments.interfaces.Refundable;
+                                            //interfaz
+public class PaypalPayment extends Payment implements Refundable {
+    private double balance;// saldo disponible
+    private  String email;
 
-    public PaypalPayment (double amount, String date, double balance){
+// INICIO CONSTRUCTOR
+    public PaypalPayment (double amount, String date, double balance, String email){
         super(amount, date);
         this.balance = (balance < 0) ? 1.0 : balance;
+        this.email = (email.isBlank())? "ERROR> INGRESA UN CORREO!": email.trim();
     }// FIN CONSTRUCTOR
 
     public double getBalance() {
@@ -30,4 +35,20 @@ public class PaypalPayment extends Payment {
     public void validateData() {
         
     }
+
+    // toString
+
+    @Override
+    public String toString() {
+        return "PaypalPayment{" +
+                "balance=" + balance +
+                ", email='" + email + '\'' +
+                "} " + super.toString();
+    }
+
+// to string PaypalPayment
+    @Override
+    public void refund() {
+
+    }// fin interfaz refund
 }//class PypalPayments
