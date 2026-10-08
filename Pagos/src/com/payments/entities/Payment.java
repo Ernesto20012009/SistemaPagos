@@ -85,6 +85,9 @@ public abstract class Payment {
     // METODO processPayment
     public abstract void processPayment();
 
+    //METODO validate data
+    public abstract void validateData();
+
 
 
 
