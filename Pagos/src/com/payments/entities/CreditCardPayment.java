@@ -24,11 +24,10 @@ public class CreditCardPayment extends Payment {
     public void processPayment() {
     if(getAmount()>paymentLimit){
         setStatus("REJECTED");
-        System.out.println("REJECTED");
     }else{
         setStatus("APPROVED");
     }// fin else
-
+        System.out.println("El estado del pago es: " + getStatus());
     }// OVERRIDE
 
     }// fin processPayment
