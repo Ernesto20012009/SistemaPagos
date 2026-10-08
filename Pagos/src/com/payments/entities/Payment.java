@@ -9,10 +9,10 @@ public abstract class Payment {
 
 
     // CONSTRUCTOR INICIO
-    public Payment(String status, double amount, String date){
+    public Payment(double amount, String date){
         Payment.total++;
         this.id = Payment.total;
-        this.status = "PENDDING";
+        this.status = "PENDING";
         this.amount = (amount <= 0) ? 1.0: amount;
         this.date = (date.isBlank()) ? "INGRESA UNA FECHA VALIDA": date.toUpperCase();
     }// fin constructor

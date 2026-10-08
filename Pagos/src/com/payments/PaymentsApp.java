@@ -5,11 +5,11 @@ import com.payments.entities.Payment;
 
 public class PaymentsApp {
     public static void main(String[] args) {
-    Payment pag1 = new CreditCardPayment("aprovved",503.54,"08/10/2026",1500);
-    Payment pag2 = new CreditCardPayment("",503.54,"",2000);
+    Payment pag1 = new CreditCardPayment(503.54,"08/10/2026",1500);
+    Payment pag2 = new CreditCardPayment(503.54,"",200);
 
     //tarjeta de credito
-        pag1.processPayment();
+        pag2.processPayment();
 
 
         System.out.println(pag1);
