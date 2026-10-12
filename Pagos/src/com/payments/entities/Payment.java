@@ -2,7 +2,7 @@ package com.payments.entities;
 
 public abstract class Payment {
     private static long total;
-    private long id ;
+    private long id;
     private String status;
     private double amount;
     private String date;
@@ -16,6 +16,10 @@ public abstract class Payment {
         this.amount = (amount <= 0) ? 1.0: amount;
         this.date = (date.isBlank()) ? "INGRESA UNA FECHA VALIDA": date.toUpperCase();
     }// fin constructor
+
+    public Payment() {// checar al rato
+
+    }
 
     //getter setter
 
