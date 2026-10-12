@@ -15,7 +15,7 @@ public abstract class Payment {
         this.date = (date == null || date.isBlank()) ? "SIN FECHA" : date.toUpperCase();
     }
 
-    // getters/setters (igual que antes, pero con validación en setters)
+    // getters/setters
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
